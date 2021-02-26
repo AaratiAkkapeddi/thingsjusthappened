@@ -17,6 +17,8 @@
         for (var i = data.length - 1; i >= 0; i--) {
           let link = document.createElement("a");
           link.href= "project.html?person="+data[i].Name.split(" ").join("-")
+//https://drive.google.com/file/d/1olPL-7O_6rDnvJo8Wpl9x1--4sheWnsp/view?usp=sharing
+//https://drive.google.com/thumbnail?id=1KDXyg-IxeXBkcExLQ6HDcs2OyUJ-8KE2&sz=w1200-h1200"
 
           let project = document.createElement("div");
           project.classList.add("project");
@@ -28,7 +30,7 @@
             name.innerHTML = data[i]["Name"];
             thumbnail.src = data[i]["Thumbnail Image"]
             console.log(thumbnail.src)
-            thumbnail.src = thumbnail.src.split("/open?").join("/uc?")
+            thumbnail.src = thumbnail.src.split("/open?").join("/thumbnail?") + "&sz=w1200-h1200"
             project.append(link)
             link.append(thumbnail)
             link.append(title)

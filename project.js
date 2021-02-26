@@ -30,7 +30,7 @@
                 for (var x = images.length - 1; x >= 0; x--) {
                   let img = document.createElement("img");
                   img.src = images[x]
-                  img.src = img.src.split("/open?").join("/uc?")
+                  img.src = img.src.split("/open?").join("/thumbnail?") + "&sz=w1200-h1200"
                   document.getElementById("project-images").append(img)
                 }
               }
