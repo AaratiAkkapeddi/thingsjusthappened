@@ -1,0 +1,11 @@
+body{
+	margin:0;
+	background:whitesmoke;
+}
+.project{
+	display:inline-block;
+	width: 300px;
+}
+.project img{
+	width: 100%;
+}
