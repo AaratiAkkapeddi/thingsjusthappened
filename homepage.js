@@ -12,7 +12,7 @@
 
       function showInfo(results) {
         var data = results.data
-        
+
 
         for (var i = data.length - 1; i >= 0; i--) {
           let link = document.createElement("a");
@@ -20,12 +20,20 @@
 
           let project = document.createElement("div");
           project.classList.add("project");
-          if(data[i]["Images"].length > 0){
+          if(data[i]["Thumbnail Image"].length > 0){
             let thumbnail = document.createElement("img");
-            thumbnail.src = data[i]["Images"].split(",")[0]
+            let title = document.createElement("h4");
+            title.innerHTML = data[i]["Project Title"];
+            let name = document.createElement("h4");
+            name.innerHTML = data[i]["Name"];
+            thumbnail.src = data[i]["Thumbnail Image"]
+            console.log(thumbnail.src)
             thumbnail.src = thumbnail.src.split("/open?").join("/uc?")
             project.append(link)
             link.append(thumbnail)
+            link.append(title)
+            link.append(name)
+
           }
           
           // p.innerHTML = data[i].text
